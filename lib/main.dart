@@ -11,18 +11,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Text('Flutter Tutorial'),
-      ),
-      body: Container(
-        child: const Text('This is a Flutter Tutorial'),
-        margin: const EdgeInsets.all(50),
-        padding: const EdgeInsets.all(10),
-        color: Colors.yellow,
-        height: 100,
-        width: 100,
-      ),
-    ));
+            appBar: AppBar(
+              backgroundColor: Colors.blue,
+              title: const Text('Flutter Tutorial'),
+            ),
+            // CONTAINER
+            // body: Container(
+            //   child: const Text('This is a Flutter Tutorial'),
+            //   margin: const EdgeInsets.all(50),
+            //   padding: const EdgeInsets.all(10),
+            //   color: Colors.yellow,
+            //   height: 100,
+            //   width: 100,
+            // ),
+            body: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: const [
+                Expanded(
+                  flex: 3,
+                  child: Icon(Icons.backpack),
+                ),
+                Icon(Icons.leaderboard),
+                Icon(Icons.person),
+              ],
+            )));
   }
 }
