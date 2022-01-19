@@ -38,17 +38,33 @@ class MyApp extends StatelessWidget {
       //     Icon(Icons.person),
       //   ],
       // )
-      body: Stack(
-        children: [
-          Container(
-            color: Colors.red,
-            width: 100,
-            height: 100,
-          ),
-          Align(
-            child: Icon(Icons.verified),
-            alignment: Alignment.center,
-          )
+
+      // STACK
+      // body: Stack(
+      //   children: [
+      //     Container(
+      //       color: Colors.red,
+      //       width: 100,
+      //       height: 100,
+      //     ),
+      //     Align(
+      //       child: Icon(Icons.verified),
+      //       alignment: Alignment.center,
+      //     )
+      //   ],
+      // ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('pressed');
+        },
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.business), label: 'Business'),
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
         ],
       ),
     ));
